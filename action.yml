@@ -1,0 +1,18 @@
+name: Deploy to docker swarm
+description: Takes a docker image and deploys to docker swarm via ssh
+inputs:
+  remote_host:
+    description: Host to connect to
+    required: true
+  ssh_public_key:
+    description: public key
+    required: false
+  ssh_private_key:
+    description: private key
+    required: false
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: upload
+  color: green
